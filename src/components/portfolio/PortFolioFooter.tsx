@@ -8,22 +8,14 @@ export const PortfolioFooter = () => {
       {/* Left side */}
       <div className="flex gap-1">
         <Link
-          href={"https://github.com/DevPathakam/"}
+          href={"https://github.com/DevPathakam/personal-branding-site/tree/main"}
           target="_blank"
           className="flex gap-1 hover:bg-brand-primary-highlight hover:cursor-pointer p-1"
         >
           <Icon icon="fluent:branch-16-regular" className="text-[18px]" />
-          <span>master*</span>
+          <span>main*</span>
         </Link>
 
-        {/* <Link
-          href={"https://github.com/DevPathakam/"}
-          target="_blank"
-          className="flex gap-1 hover:bg-brand-primary-highlight hover:cursor-pointer p-1"
-        >
-          <Icon icon="material-symbols:download" className="text-[18px]" />
-          <span>View Resume</span>
-        </Link> */}
         <ViewResumeButton />
       </div>
 
