@@ -1,0 +1,21 @@
+.vscodeScrollLook::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.vscodeScrollLook::-webkit-scrollbar-track {
+  background-color: var(--brand-primary); 
+}
+
+.vscodeScrollLook::-webkit-scrollbar-thumb {
+  background-color: var(--brand-primary-highlight);
+  border-radius: 0px; /* VS code style sharp edges */
+}
+
+.vscodeScrollLook::-webkit-scrollbar-thumb:hover {
+  background-color: var(--brand-primary-highlight-hover);
+}
+
+.vscodeScrollLook::-webkit-scrollbar-thumb:active {
+  background-color: var(--brand-primary-highlight-active);
+}
