@@ -6,6 +6,7 @@ export type PortfolioState = {
   openFiles: FakeFile[];
   currentFile: FakeFile | null;
   showLeftSidebar: boolean;
+  jsonFileLineCounts: number | null;
 };
 
 export type PortfolioActions = {
@@ -15,6 +16,7 @@ export type PortfolioActions = {
     fileToRemoveBelongsTo: FakeFileBelongsTo,
   ) => void;
   toggleLeftSidebar: () => void;
+  setJsonFileLineCounts: (count: number | null) => void;
 
   resetState: () => void;
 };
@@ -25,6 +27,7 @@ const initialState: PortfolioState = {
   openFiles: [],
   currentFile: null,
   showLeftSidebar: true,
+  jsonFileLineCounts: null,
 };
 
 export const usePortfolioStore = create<PortfolioStore>()(
@@ -57,6 +60,8 @@ export const usePortfolioStore = create<PortfolioStore>()(
         }),
       toggleLeftSidebar: () =>
         set((state) => ({ showLeftSidebar: !state.showLeftSidebar })),
+      setJsonFileLineCounts: (count: number | null) =>
+        set({ jsonFileLineCounts: count }),
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       resetState: () => set((_state) => initialState),
     }),

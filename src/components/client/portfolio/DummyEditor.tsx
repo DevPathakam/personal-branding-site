@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect } from "react";
 import { LineSegment } from "@/types/dummyEditor";
 import { createRenderLines } from "@/utils/portfolio";
+import { usePortfolioStore } from "@/stores/portfolioStore";
 
 interface DummyEditorProps<T> {
   data: T[];
@@ -7,6 +11,14 @@ interface DummyEditorProps<T> {
 }
 export function DummyEditor<T>({ data, schema }: DummyEditorProps<T>) {
   const lines = createRenderLines(data, schema);
+  const currentFileType = usePortfolioStore((state) => state.currentFile?.type);
+  const setJsonFileLineCounts = usePortfolioStore(
+    (state) => state.setJsonFileLineCounts,
+  );
+
+  useEffect(() => {
+    setJsonFileLineCounts(currentFileType === "JSON" ? lines.length : null);
+  }, [currentFileType, lines.length, setJsonFileLineCounts]);
 
   const getCodeClasses = (segment: LineSegment) => {
     let classes = "";
