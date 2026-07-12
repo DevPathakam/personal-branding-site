@@ -109,15 +109,15 @@ export const Skills: Skill[] = [
     category: ["libraries", "frontend"],
     tags: ["state management"]
   },
-  // {
-  //   name: "Zustand",
-  //   alias: "zustand",
-  //   icon: "devicon:zustand",
-  //   visible: true,
-  //   isFeatured: true,
-  //   category: ["libraries", "frontend"],
-  //   tags: ["state management"]
-  // },
+  {
+    name: "Zustand",
+    alias: "zustand",
+    icon: "devicon:zustand",
+    visible: true,
+    isFeatured: false,
+    category: ["libraries", "frontend"],
+    tags: ["state management"]
+  },
   {
     name: "React Flow",
     alias: "flow",
@@ -537,7 +537,7 @@ export const Projects: Project[] = [
     alias: "personal_site",
     points: ["Point 1", "Point 2"],
     isPersonal: true,
-    techStack: getTechStack(["react", "next", "tailwind"]),
+    techStack: getTechStack(["react", "next", "tailwind", "zustand"]),
     duration: '1 week',
     isVisible: true,
   },

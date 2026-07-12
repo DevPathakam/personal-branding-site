@@ -2,7 +2,7 @@ import { SocialLink } from "@/components/portfolio/SocialLink";
 import { SocialLinks as socialLinks } from "@/constants/portfolio";
 export default function PortfolioPage() {
   return (
-    <div className="container mx-auto font-jetbrains-mono flex flex-col items-center justify-center min-h-screen max-h-screen gap-5 overflow-hidden text-gray-500 ">
+    <div className="container mx-auto font-jetbrains-mono flex flex-col items-center justify-center min-h-screen max-h-screen gap-5 overflow-hidden text-brand-primary-deep-dark font-bold ">
       {/* Title */}
       <section about="title">
         <h2 className="text-6xl font-bold">Aman Pathak</h2>
@@ -13,7 +13,7 @@ export default function PortfolioPage() {
         <h2 className="text-4xl font-bold">Sr. Frontend Developer</h2>
       </section>
 
-      <hr className="border w-100 border-brand-secondary" />
+      <hr className="border-2 w-50 rounded-4xl" />
 
       {/* What I do */}
       <div className="text-center w-150">

@@ -16,7 +16,7 @@ export const PortFolioHeader = () => {
           <Link
             key={`navlink-${idx}`}
             href={nav.href}
-            className="hover:bg-brand-primary-highlight hover:rounded-sm p-2"
+            className="hover:bg-brand-primary-highlight p-2"
           >
             {nav.label}
           </Link>

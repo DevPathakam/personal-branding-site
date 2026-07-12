@@ -24,7 +24,7 @@ export function DummyEditor<T>({ data, schema }: DummyEditorProps<T>) {
   };
 
   return (
-    <div className="flex font-jetbrains-mono text-sm">
+    <code className="flex font-jetbrains-mono text-sm">
       <div>
         {lines.map((ln, idx) => (
           <div
@@ -55,6 +55,6 @@ export function DummyEditor<T>({ data, schema }: DummyEditorProps<T>) {
           </div>
         ))}
       </div>
-    </div>
+    </code>
   );
 }

@@ -11,10 +11,12 @@ export type Skill = SkillProps & {
   isFeatured?: boolean;
 };
 
-export type ExplorerDecendent = {
+export type FakeFile = {
   href: string;
-  pageName: string;
-  type?: "Markdown" | "JSON";
+  fileName: string;
+  type: FakeFileType;
+  isActive: boolean
+  belongsTo: FakeFileBelongsTo;
 };
 
 export type Company = {
@@ -47,3 +49,6 @@ export type Achievement = {
   achievedFrom?: string;
   achievedAt?: Company;
 };
+
+export type FakeFileBelongsTo = "skills" | "projects" | "root";
+export type FakeFileType = "Markdown" | "JSON";
