@@ -20,20 +20,6 @@ export default function HomePage() {
             className="border-8 border-[#0D1141] rounded-full shadow-2xl min-h-96 max-h-96 min-w-96 max-w-96"
           />
         </BouncingElement>
-        <div className="flex gap-4">
-          {[
-            { name: "About", href: "/about" },
-            { name: "Portfolio", href: "/portfolio" },
-          ].map((page, idx) => (
-            <Link
-              key={`page-link-button-${idx}`}
-              className="bg-brand-primary text-amber-50 font-bold px-3 py-2 rounded-2xl border-brand-primary-deep-dark hover:cursor-pointer shadow-2xs"
-              href={page.href}
-            >
-              {page.name}
-            </Link>
-          ))}
-        </div>
       </div>
     </main>
   );
