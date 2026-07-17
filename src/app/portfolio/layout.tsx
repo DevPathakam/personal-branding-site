@@ -2,8 +2,8 @@ import { VerticalMarquee } from "@/components/client/VerticalMarquee";
 import { ScrollbarClasses, Skills } from "@/constants/portfolio";
 import { Icon } from "@iconify/react";
 import { PortfolioFooter } from "../../components/portfolio/PortFolioFooter";
-import { Explorer } from "@/components/portfolio/Explorer";
-import { Tabbar } from "@/components/portfolio/Tabbar";
+import { Explorer } from "@/components/client/portfolio/Explorer";
+import { Tabbar } from "@/components/client/portfolio/Tabbar";
 
 import { JetBrains_Mono } from "next/font/google";
 
