@@ -1,7 +1,7 @@
 import { Skills, SkillSchema } from "@/constants/portfolio";
 import { Skill } from "@/types/portfolio";
 
-import { DummyEditor } from "@/components/portfolio/DummyEditor";
+import { DummyEditor } from "@/components/client/portfolio/DummyEditor";
 
 export default async function SkillsPage() {
   return (

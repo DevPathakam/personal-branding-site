@@ -1,4 +1,4 @@
-import { DummyEditor } from "@/components/portfolio/DummyEditor";
+import { DummyEditor } from "@/components/client/portfolio/DummyEditor";
 import { Skills, SkillSchema } from "@/constants/portfolio";
 import { Skill, SkillCategory } from "@/types/portfolio";
 

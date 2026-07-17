@@ -1,6 +1,8 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { ViewResumeButton } from "../client/portfolio/ViewResumeButton";
+import { FooterFileType } from "../client/portfolio/FooterFileType";
+import { FooterLineCounts } from "../client/portfolio/FooterLineCounts";
 
 export const PortfolioFooter = () => {
   return (
@@ -8,7 +10,9 @@ export const PortfolioFooter = () => {
       {/* Left side */}
       <div className="flex gap-1">
         <Link
-          href={"https://github.com/DevPathakam/personal-branding-site/tree/main"}
+          href={
+            "https://github.com/DevPathakam/personal-branding-site/tree/main"
+          }
           target="_blank"
           className="flex gap-1 hover:bg-brand-primary-highlight hover:cursor-pointer p-1"
         >
@@ -22,13 +26,16 @@ export const PortfolioFooter = () => {
       {/* Right side */}
       <div className="flex gap-3">
         <div className="flex gap-1 p-1">
+          <FooterLineCounts />
+        </div>
+
+        <div className="flex gap-1 p-1">
           <Icon icon="material-symbols:mail" className="text-[18px]" />
           <span>amanpathak.devwork@gmail.com</span>
         </div>
 
         <div className="flex gap-1 p-1">
-          <Icon icon="codicon:json" className="text-[18px]" />
-          <span>Markdown</span>
+          <FooterFileType />
         </div>
 
         <Link

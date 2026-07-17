@@ -1,19 +1,22 @@
 "use client";
 
-import { ExplorerDecendent } from "@/types/portfolio";
+import { usePortfolioStore } from "@/stores/portfolioStore";
+import { FakeFile } from "@/types/portfolio";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { ReactNode, useState } from "react";
 
 interface ExplorerAccordianProps {
   header: ReactNode | string;
-  descendants: ExplorerDecendent[];
+  descendants: FakeFile[];
 }
 export const ExplorerAccordian = ({
   header,
   descendants,
 }: ExplorerAccordianProps) => {
   const [showDescendants, setShowDescendants] = useState(true);
+
+  const activateFile =  usePortfolioStore((state) => state.addActiveFile)
 
   return (
     <div>
@@ -30,6 +33,7 @@ export const ExplorerAccordian = ({
               key={`explorer-descendant-page-${idx}`}
               href={descendant.href}
               className="hover:bg-brand-primary-highlight flex gap-2"
+              onClick={() => activateFile(descendant)}
             >
               <Icon
                 icon={
@@ -40,7 +44,7 @@ export const ExplorerAccordian = ({
                 className="text-xl"
               />
               <span className="text-sm">
-                {descendant.pageName}
+                {descendant.fileName}
                 {descendant.type === "JSON" ? ".json" : ".md"}
               </span>
             </Link>
