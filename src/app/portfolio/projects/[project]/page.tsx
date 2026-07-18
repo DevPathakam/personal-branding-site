@@ -1,3 +1,4 @@
+import { NpmPill } from "@/components/portfolio/NpmPill";
 import { Projects } from "@/constants/portfolio";
 import { Icon } from "@iconify/react";
 
@@ -60,7 +61,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Tech stack */}
-          <div className="border-2 border-brand-border rounded-2xl flex gap-9 my-5 p-3 text-3xl w-fit shadow-2xl bg-brand-primary-deep-dark">
+          <div className="border-2 border-brand-border rounded-2xl flex flex-wrap gap-4 md:gap-9 my-5 p-3 text-3xl w-fit shadow-2xl bg-brand-primary-deep-dark">
             {selectedProject.techStack.length > 0 &&
               selectedProject.techStack.map((tech, idx) => (
                 <p
@@ -77,15 +78,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Duration and Company */}
-          <div className="flex gap-3 my-5">
+          <div className="flex flex-col md:flex-row gap-3 my-5">
             {selectedProject.company && (
-              <small className="border border-[#ff5a60] text-[#ff5a60] py-1 px-2 rounded-4xl bg-brand-primary-dark">
-                For: {selectedProject.company.name}
-              </small>
+              <NpmPill
+                label="for"
+                value={selectedProject.company.name}
+                valueClasses="bg-red-500"
+              />
             )}
-            <small className="border border-brand-secondary text-brand-secondary py-1 px-2 rounded-4xl bg-brand-primary-dark">
-              Duration: {selectedProject.duration}
-            </small>
+            <NpmPill
+              label="duration"
+              value={selectedProject.duration}
+              valueClasses="bg-brand-secondary text-black"
+            />
           </div>
         </div>
       </article>

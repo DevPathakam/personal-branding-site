@@ -22,7 +22,7 @@ export const PortFolioHeader = () => {
           </Link>
         ))}
       </div>
-      <div className="border p-1 my-1 border-brand-border rounded-2xl flex gap-1 min-w-sm justify-center">
+      <div className="hidden md:flex border p-1 my-1 border-brand-border rounded-2xl gap-1 min-w-sm justify-center">
         <Icon icon={"iconamoon:search"} className="text-[16px]" />
         <span>amanpathak.devwork</span>
       </div>

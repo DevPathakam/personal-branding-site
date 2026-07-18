@@ -14,7 +14,7 @@ export const PortfolioFooter = () => {
             "https://github.com/DevPathakam/personal-branding-site/tree/main"
           }
           target="_blank"
-          className="flex gap-1 hover:bg-brand-primary-highlight hover:cursor-pointer p-1"
+          className="hidden md:flex gap-1 hover:bg-brand-primary-highlight hover:cursor-pointer p-1"
         >
           <Icon icon="fluent:branch-16-regular" className="text-[18px]" />
           <span>main*</span>
@@ -25,7 +25,7 @@ export const PortfolioFooter = () => {
 
       {/* Right side */}
       <div className="flex gap-3">
-        <div className="flex gap-1 p-1">
+        <div className="hidden md:flex gap-1 p-1">
           <FooterLineCounts />
         </div>
 
@@ -34,14 +34,14 @@ export const PortfolioFooter = () => {
           <span>amanpathak.devwork@gmail.com</span>
         </div>
 
-        <div className="flex gap-1 p-1">
+        <div className="hidden md:flex gap-1 p-1">
           <FooterFileType />
         </div>
 
         <Link
           href={"https://nextjs.org/"}
           target="_blank"
-          className="flex gap-1 hover:bg-brand-primary-highlight hover:cursor-pointer p-1"
+          className="hidden md:flex gap-1 hover:bg-brand-primary-highlight hover:cursor-pointer p-1"
         >
           <Icon icon="lineicons:nextjs" className="text-[18px]" />
           <span>Powered by Next.js</span>

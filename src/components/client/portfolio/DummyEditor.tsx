@@ -37,7 +37,7 @@ export function DummyEditor<T>({ data, schema }: DummyEditorProps<T>) {
 
   return (
     <code className="flex font-jetbrains-mono text-sm">
-      <div>
+      <div className="hidden md:flex flex-col">
         {lines.map((ln, idx) => (
           <div
             key={`code-line-number${idx + 1}`}
@@ -48,7 +48,7 @@ export function DummyEditor<T>({ data, schema }: DummyEditorProps<T>) {
         ))}
       </div>
 
-      <div>
+      <div className="flex-1 overflow-x-auto w-full whitespace-nowrap">
         {lines.map((ln, lnIdx) => (
           <div
             key={`code-line-${lnIdx}`}

@@ -23,7 +23,7 @@ export default function PortfolioLayout({
         className={`flex flex-col h-screen w-screen overflow-hidden bg-brand-primary font-mono pb-16 ${jetBrainsMono.variable}`}
       >
         <div className="flex flex-1 w-full overflow-hidden">
-          <aside className="bg-brand-primary-dark border-r border-r-brand-border">
+          <aside className="hidden md:block bg-brand-primary-dark border-r border-r-brand-border">
             <VerticalMarquee className="px-3 flex flex-col gap-6  ">
               {Skills.map(
                 (skill, idx) =>

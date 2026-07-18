@@ -16,7 +16,7 @@ export default function ProjectsPage() {
               project.isVisible && (
                 <div
                   key={`project-card-${idx}`}
-                  className="my-5 p-3 border-2 border-brand-border rounded-xl bg-brand-primary-deep-dark shadow-2xl w-120"
+                  className="my-5 p-3 border-2 border-brand-border rounded-xl bg-brand-primary-deep-dark shadow-2xl w-full md:w-120"
                 >
                   <div className="mb-2 flex justify-between">
                     <span className="text-xl font-bold">{project.name}</span>
