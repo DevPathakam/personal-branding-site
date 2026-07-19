@@ -51,12 +51,12 @@ export const IntroCardTitle = () => {
   }, [count, currentPhraseIndex, phrases]);
 
   return (
-    <h2 className="text-4xl font-bold text-brand-secondary">
+    <h2 className="text-xl md:text-4xl font-bold text-brand-secondary">
       <motion.span>{displayText}</motion.span>
       <motion.span
         animate={{ opacity: [1, 0, 1] }}
         transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
-        className="inline-block w-1 h-8 ml-1 text-brand-secondary"
+        className="inline-block w-1 h-6 md:h-8 ml-1 text-brand-secondary"
       >
         |
       </motion.span>

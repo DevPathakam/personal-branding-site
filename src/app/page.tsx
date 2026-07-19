@@ -17,7 +17,7 @@ export default function HomePage() {
           <Image
             src={PopArt}
             alt="herro"
-            className="border-8 border-[#0D1141] rounded-full shadow-2xl min-h-96 max-h-96 min-w-96 max-w-96"
+            className="border-4 md:border-8 border-[#0D1141] rounded-full shadow-2xl w-40 h-40 sm:w-80 sm:h-80 md:w-96 md:h-96"
           />
         </BouncingElement>
       </div>

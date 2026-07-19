@@ -75,7 +75,7 @@ export const Explorer = () => {
   const showSidebar = usePortfolioStore((state) => state.showLeftSidebar);
   return (
     showSidebar && (
-      <nav className="font-jetbrains-mono w-65 h-full bg-brand-primary-deep-dark flex justify-between flex-col border-r border-r-brand-border select-none">
+      <nav className="font-jetbrains-mono w-65 h-full bg-brand-primary-deep-dark flex justify-between flex-col border-r border-r-brand-border select-none absolute md:relative z-20 top-0 left-0">
         <div className={`mb-3 overflow-auto ${ScrollbarClasses}`}>
           <div className="p-2 text-xs uppercase tracking-wider opacity-60">
             Explorer
